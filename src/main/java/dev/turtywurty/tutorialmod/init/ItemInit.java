@@ -4,6 +4,7 @@ import dev.turtywurty.tutorialmod.TutorialMod;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,5 +23,11 @@ public class ItemInit {
                             .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 200, 2), 1f)
                             .build())
                     .rarity(Rarity.EPIC)
+            ));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_BLOCK.get(),
+                    new Item.Properties()
+                            .rarity(Rarity.UNCOMMON)
             ));
 }
