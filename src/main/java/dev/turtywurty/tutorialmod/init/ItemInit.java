@@ -4,9 +4,7 @@ import dev.turtywurty.tutorialmod.TutorialMod;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -31,5 +29,73 @@ public class ItemInit {
             () -> new BlockItem(BlockInit.EXAMPLE_BLOCK.get(),
                     new Item.Properties()
                             .rarity(Rarity.UNCOMMON)
+            )));
+
+    public static final RegistryObject<SwordItem> EXAMPLE_SWORD = addToTab(ITEMS.register("example_sword",
+            () -> new SwordItem(
+                    TierInit.EXAMPLE,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<PickaxeItem> EXAMPLE_PICKAXE = addToTab(ITEMS.register("example_pickaxe",
+            () -> new PickaxeItem(
+                    TierInit.EXAMPLE,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<ShovelItem> EXAMPLE_SHOVEL = addToTab(ITEMS.register("example_shovel",
+            () -> new ShovelItem(
+                    TierInit.EXAMPLE,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<AxeItem> EXAMPLE_AXE = addToTab(ITEMS.register("example_axe",
+            () -> new AxeItem(
+                    TierInit.EXAMPLE,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<HoeItem> EXAMPLE_HOE = addToTab(ITEMS.register("example_hoe",
+            () -> new HoeItem(
+                    TierInit.EXAMPLE,
+                    7,
+                    2.5f,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<ArmorItem> EXAMPLE_HELMET = addToTab(ITEMS.register("example_helmet",
+            () -> new ArmorItem(
+                    ArmorMaterialInit.EXAMPLE,
+                    ArmorItem.Type.HELMET,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<ArmorItem> EXAMPLE_CHESTPLATE = addToTab(ITEMS.register("example_chestplate",
+            () -> new ArmorItem(
+                    ArmorMaterialInit.EXAMPLE,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<ArmorItem> EXAMPLE_LEGGINGS = addToTab(ITEMS.register("example_leggings",
+            () -> new ArmorItem(
+                    ArmorMaterialInit.EXAMPLE,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()
+            )));
+
+    public static final RegistryObject<ArmorItem> EXAMPLE_BOOTS = addToTab(ITEMS.register("example_boots",
+            () -> new ArmorItem(
+                    ArmorMaterialInit.EXAMPLE,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Properties()
             )));
 }
