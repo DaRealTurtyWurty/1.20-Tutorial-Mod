@@ -10,15 +10,24 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 
 public class ExampleEntityModel<T extends ExampleEntity> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION =
 			new ModelLayerLocation(new ResourceLocation(TutorialMod.MODID, "example_entity"), "main");
 
-	private final ModelPart body;
+	private final ModelParts parts;
 
 	public ExampleEntityModel(ModelPart root) {
-		this.body = root.getChild("body");
+		ModelPart body = root.getChild("body");
+		ModelPart head = body.getChild("head");
+		ModelPart legs = body.getChild("legs");
+		ModelPart frontLeftLeg = legs.getChild("frontLeft");
+		ModelPart frontRightLeg = legs.getChild("frontRight");
+		ModelPart backLeftLeg = legs.getChild("backLeft");
+		ModelPart backRightLeg = legs.getChild("backRight");
+
+		this.parts = new ModelParts(body, head, legs, frontLeftLeg, frontRightLeg, backLeftLeg, backRightLeg);
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -37,10 +46,20 @@ public class ExampleEntityModel<T extends ExampleEntity> extends EntityModel<T> 
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {}
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.parts.head().yRot = netHeadYaw * Mth.DEG_TO_RAD;
+		this.parts.head().xRot = headPitch * Mth.DEG_TO_RAD;
+
+		this.parts.frontLeftLeg().xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.parts.frontRightLeg().xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
+		this.parts.backLeftLeg().xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount;
+		this.parts.backRightLeg().xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+	}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		this.parts.body().render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
+
+	private record ModelParts(ModelPart body, ModelPart head, ModelPart legs, ModelPart frontLeftLeg, ModelPart frontRightLeg, ModelPart backLeftLeg, ModelPart backRightLeg) {}
 }
