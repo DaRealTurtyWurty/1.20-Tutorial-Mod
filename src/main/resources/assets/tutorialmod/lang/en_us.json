@@ -10,5 +10,7 @@
   "item.tutorialmod.example_helmet": "Example Helmet",
   "item.tutorialmod.example_chestplate": "Example Chestplate",
   "item.tutorialmod.example_leggings": "Example Leggings",
-  "item.tutorialmod.example_boots": "Example Boots"
+  "item.tutorialmod.example_boots": "Example Boots",
+  "entity.tutorialmod.example_entity": "Example Entity",
+  "item.tutorialmod.example_spawn_egg": "Spawn Example Entity"
 }
