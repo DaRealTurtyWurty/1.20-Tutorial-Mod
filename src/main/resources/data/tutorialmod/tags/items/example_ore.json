@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:example_block",
     "tutorialmod:example_ore",
     "tutorialmod:deepslate_example_ore",
     "tutorialmod:nether_example_ore",

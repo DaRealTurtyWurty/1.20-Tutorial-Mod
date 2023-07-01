@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "tutorialmod:example_ore"
+  },
+  "result": "tutorialmod:example_item",
+  "experience": 0.7,
+  "cookingtime": 100
+}

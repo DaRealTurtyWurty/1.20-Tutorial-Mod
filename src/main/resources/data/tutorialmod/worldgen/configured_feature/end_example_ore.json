@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 7,
+    "discard_chance_on_air_exposure": 0.05,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "minecraft:end_stone"
+        },
+        "state": {
+          "Name": "tutorialmod:end_example_ore"
+        }
+      }
+    ]
+  }
+}

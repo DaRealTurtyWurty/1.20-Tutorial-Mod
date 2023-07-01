@@ -12,5 +12,9 @@
   "item.tutorialmod.example_leggings": "Example Leggings",
   "item.tutorialmod.example_boots": "Example Boots",
   "entity.tutorialmod.example_entity": "Example Entity",
-  "item.tutorialmod.example_spawn_egg": "Spawn Example Entity"
+  "item.tutorialmod.example_spawn_egg": "Spawn Example Entity",
+  "block.tutorialmod.example_ore": "Example Ore",
+  "block.tutorialmod.deepslate_example_ore": "Deepslate Example Ore",
+  "block.tutorialmod.nether_example_ore": "Nether Example Ore",
+  "block.tutorialmod.end_example_ore": "End Example Ore"
 }

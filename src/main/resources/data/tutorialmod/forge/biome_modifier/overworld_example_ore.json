@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "tutorialmod:overworld_example_ore",
+  "biomes": "#minecraft:is_overworld",
+  "step": "underground_ores"
+}

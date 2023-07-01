@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "E E",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "tutorialmod:example_item"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:example_chestplate"
+  }
+}

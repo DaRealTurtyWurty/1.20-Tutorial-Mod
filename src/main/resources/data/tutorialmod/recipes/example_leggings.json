@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "E E",
+    "E E"
+  ],
+  "key": {
+    "E": {
+      "item": "tutorialmod:example_item"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:example_leggings"
+  }
+}

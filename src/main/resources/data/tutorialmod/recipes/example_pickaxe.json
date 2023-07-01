@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "E": {
+      "item": "tutorialmod:example_item"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:example_pickaxe"
+  }
+}
