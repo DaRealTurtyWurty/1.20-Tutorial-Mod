@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "minecraft:plains",
+  "spawners": {
+    "type": "tutorialmod:example_animated_entity",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

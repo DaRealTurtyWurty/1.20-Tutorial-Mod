@@ -103,6 +103,9 @@ public class ItemInit {
     public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_SPAWN_EGG = addToTab(ITEMS.register("example_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0xF0ABD1, 0xAE4C82, new Item.Properties())));
 
+    public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_ANIMATED_SPAWN_EGG = addToTab(ITEMS.register("example_animated_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ANIMATED_ENTITY, 0x82BA9C, 0x4C8E6C, new Item.Properties())));
+
     public static final RegistryObject<BlockItem> EXAMPLE_ORE_ITEM = addToTab(ITEMS.register("example_ore",
             () -> new BlockItem(BlockInit.EXAMPLE_ORE.get(), new Item.Properties())));
 

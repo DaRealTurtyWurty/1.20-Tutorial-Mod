@@ -1,7 +1,9 @@
 package dev.turtywurty.tutorialmod.events;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
+import dev.turtywurty.tutorialmod.client.model.ExampleAnimatedEntityModel;
 import dev.turtywurty.tutorialmod.client.model.ExampleEntityModel;
+import dev.turtywurty.tutorialmod.client.renderer.ExampleAnimatedEntityRenderer;
 import dev.turtywurty.tutorialmod.client.renderer.ExampleEntityRenderer;
 import dev.turtywurty.tutorialmod.init.EntityInit;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,10 +16,12 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(EntityInit.EXAMPLE_ENTITY.get(), ExampleEntityRenderer::new);
+        event.registerEntityRenderer(EntityInit.EXAMPLE_ANIMATED_ENTITY.get(), ExampleAnimatedEntityRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ExampleEntityModel.LAYER_LOCATION, ExampleEntityModel::createBodyLayer);
+        event.registerLayerDefinition(ExampleAnimatedEntityModel.LAYER_LOCATION, ExampleAnimatedEntityModel::createBodyLayer);
     }
 }

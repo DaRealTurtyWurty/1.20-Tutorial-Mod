@@ -16,5 +16,7 @@
   "block.tutorialmod.example_ore": "Example Ore",
   "block.tutorialmod.deepslate_example_ore": "Deepslate Example Ore",
   "block.tutorialmod.nether_example_ore": "Nether Example Ore",
-  "block.tutorialmod.end_example_ore": "End Example Ore"
+  "block.tutorialmod.end_example_ore": "End Example Ore",
+  "entity.tutorialmod.example_animated_entity": "Example Animated Entity",
+  "item.tutorialmod.example_animated_spawn_egg": "Spawn Example Animated Entity"
 }
