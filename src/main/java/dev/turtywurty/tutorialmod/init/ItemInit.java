@@ -117,4 +117,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> END_EXAMPLE_ORE_ITEM = addToTab(ITEMS.register("end_example_ore",
             () -> new BlockItem(BlockInit.END_EXAMPLE_ORE.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_BLOCK_ENTITY_ITEM = addToTab(ITEMS.register("example_block_entity",
+            () -> new BlockItem(BlockInit.EXAMPLE_BLOCK_ENTITY.get(), new Item.Properties())));
 }

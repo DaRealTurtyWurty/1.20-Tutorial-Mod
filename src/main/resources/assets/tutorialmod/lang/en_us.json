@@ -18,5 +18,6 @@
   "block.tutorialmod.nether_example_ore": "Nether Example Ore",
   "block.tutorialmod.end_example_ore": "End Example Ore",
   "entity.tutorialmod.example_animated_entity": "Example Animated Entity",
-  "item.tutorialmod.example_animated_spawn_egg": "Spawn Example Animated Entity"
+  "item.tutorialmod.example_animated_spawn_egg": "Spawn Example Animated Entity",
+  "block.tutorialmod.example_block_entity": "Example Block Entity"
 }

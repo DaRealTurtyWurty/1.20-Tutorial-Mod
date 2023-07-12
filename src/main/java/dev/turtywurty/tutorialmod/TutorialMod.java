@@ -1,9 +1,6 @@
 package dev.turtywurty.tutorialmod;
 
-import dev.turtywurty.tutorialmod.init.BlockInit;
-import dev.turtywurty.tutorialmod.init.CreativeTabInit;
-import dev.turtywurty.tutorialmod.init.EntityInit;
-import dev.turtywurty.tutorialmod.init.ItemInit;
+import dev.turtywurty.tutorialmod.init.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,5 +16,6 @@ public class TutorialMod {
         BlockInit.BLOCKS.register(bus);
         CreativeTabInit.TABS.register(bus);
         EntityInit.ENTITIES.register(bus);
+        BlockEntityInit.BLOCK_ENTITIES.register(bus);
     }
 }

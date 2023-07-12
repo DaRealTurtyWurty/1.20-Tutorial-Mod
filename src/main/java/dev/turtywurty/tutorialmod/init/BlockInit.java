@@ -1,6 +1,7 @@
 package dev.turtywurty.tutorialmod.init;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
+import dev.turtywurty.tutorialmod.block.ExampleAdvancedBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -52,4 +53,10 @@ public class BlockInit {
                     UniformInt.of(10, 15)
             )
     );
+
+    public static final RegistryObject<ExampleAdvancedBlock> EXAMPLE_BLOCK_ENTITY = BLOCKS.register("example_block_entity",
+            () -> new ExampleAdvancedBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)
+                    .mapColor(MapColor.TERRACOTTA_YELLOW)
+                    .strength(5.0f, 15f)
+            ));
 }
