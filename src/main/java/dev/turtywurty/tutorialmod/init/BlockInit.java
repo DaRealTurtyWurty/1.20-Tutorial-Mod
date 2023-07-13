@@ -2,6 +2,7 @@ package dev.turtywurty.tutorialmod.init;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.block.ExampleAdvancedBlock;
+import dev.turtywurty.tutorialmod.block.ExampleTickingBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -54,9 +55,15 @@ public class BlockInit {
             )
     );
 
-    public static final RegistryObject<ExampleAdvancedBlock> EXAMPLE_BLOCK_ENTITY = BLOCKS.register("example_block_entity",
+    public static final RegistryObject<ExampleAdvancedBlock> EXAMPLE_ADVANCED_BLOCK = BLOCKS.register("example_advanced_block",
             () -> new ExampleAdvancedBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)
                     .mapColor(MapColor.TERRACOTTA_YELLOW)
                     .strength(5.0f, 15f)
+            ));
+
+    public static final RegistryObject<ExampleTickingBlock> EXAMPLE_TICKING_BLOCK = BLOCKS.register("example_ticking_block",
+            () -> new ExampleTickingBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
+                    .mapColor(MapColor.WARPED_STEM)
+                    .strength(2.0f, 8f)
             ));
 }

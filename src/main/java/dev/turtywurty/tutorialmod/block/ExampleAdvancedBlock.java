@@ -29,7 +29,7 @@ public class ExampleAdvancedBlock extends HorizontalDirectionalBlock implements 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(@NotNull BlockPos pos, @NotNull BlockState state) {
-        return BlockEntityInit.EXAMPLE_ADVANCED_BLOCK_ENTITY.get().create(pos, state);
+        return BlockEntityInit.EXAMPLE_ADVANCED_BLOCK.get().create(pos, state);
     }
 
     @Override

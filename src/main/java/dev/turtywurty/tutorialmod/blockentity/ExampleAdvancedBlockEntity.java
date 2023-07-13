@@ -12,7 +12,7 @@ public class ExampleAdvancedBlockEntity extends BlockEntity {
     private int counter;
 
     public ExampleAdvancedBlockEntity(BlockPos pos, BlockState state) {
-        super(BlockEntityInit.EXAMPLE_ADVANCED_BLOCK_ENTITY.get(), pos, state);
+        super(BlockEntityInit.EXAMPLE_ADVANCED_BLOCK.get(), pos, state);
     }
 
     @Override

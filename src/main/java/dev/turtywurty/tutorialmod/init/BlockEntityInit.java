@@ -2,6 +2,7 @@ package dev.turtywurty.tutorialmod.init;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.blockentity.ExampleAdvancedBlockEntity;
+import dev.turtywurty.tutorialmod.blockentity.ExampleTickingBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,8 +12,13 @@ public class BlockEntityInit {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, TutorialMod.MODID);
 
-    public static final RegistryObject<BlockEntityType<ExampleAdvancedBlockEntity>> EXAMPLE_ADVANCED_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("example_advanced_block_entity",
-                    () -> BlockEntityType.Builder.of(ExampleAdvancedBlockEntity::new, BlockInit.EXAMPLE_BLOCK_ENTITY.get())
+    public static final RegistryObject<BlockEntityType<ExampleAdvancedBlockEntity>> EXAMPLE_ADVANCED_BLOCK =
+            BLOCK_ENTITIES.register("example_advanced_block",
+                    () -> BlockEntityType.Builder.of(ExampleAdvancedBlockEntity::new, BlockInit.EXAMPLE_ADVANCED_BLOCK.get())
+                            .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleTickingBlockEntity>> EXAMPLE_TICKING_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("example_ticking_block",
+                    () -> BlockEntityType.Builder.of(ExampleTickingBlockEntity::new, BlockInit.EXAMPLE_TICKING_BLOCK.get())
                             .build(null));
 }

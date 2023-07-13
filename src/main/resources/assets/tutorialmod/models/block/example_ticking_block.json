@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "tutorialmod:block/example_block_entity"
+    "all": "tutorialmod:block/example_ticking_block"
   }
 }

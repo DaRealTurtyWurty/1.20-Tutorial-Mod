@@ -118,6 +118,9 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> END_EXAMPLE_ORE_ITEM = addToTab(ITEMS.register("end_example_ore",
             () -> new BlockItem(BlockInit.END_EXAMPLE_ORE.get(), new Item.Properties())));
 
-    public static final RegistryObject<BlockItem> EXAMPLE_BLOCK_ENTITY_ITEM = addToTab(ITEMS.register("example_block_entity",
-            () -> new BlockItem(BlockInit.EXAMPLE_BLOCK_ENTITY.get(), new Item.Properties())));
+    public static final RegistryObject<BlockItem> EXAMPLE_ADVANCED_BLOCK_ITEM = addToTab(ITEMS.register("example_advanced_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_ADVANCED_BLOCK.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_TICKING_BLOCK_ITEM = addToTab(ITEMS.register("example_ticking_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_TICKING_BLOCK.get(), new Item.Properties())));
 }

@@ -19,5 +19,6 @@
   "block.tutorialmod.end_example_ore": "End Example Ore",
   "entity.tutorialmod.example_animated_entity": "Example Animated Entity",
   "item.tutorialmod.example_animated_spawn_egg": "Spawn Example Animated Entity",
-  "block.tutorialmod.example_block_entity": "Example Block Entity"
+  "block.tutorialmod.example_advanced_block": "Example Advanced Block",
+  "block.tutorialmod.example_ticking_block": "Example Ticking Block"
 }
