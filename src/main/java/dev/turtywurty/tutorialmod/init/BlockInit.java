@@ -2,6 +2,7 @@ package dev.turtywurty.tutorialmod.init;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.block.ExampleAdvancedBlock;
+import dev.turtywurty.tutorialmod.block.ExampleItemCapBlock;
 import dev.turtywurty.tutorialmod.block.ExampleTickingBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
@@ -65,5 +66,11 @@ public class BlockInit {
             () -> new ExampleTickingBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
                     .mapColor(MapColor.WARPED_STEM)
                     .strength(2.0f, 8f)
+            ));
+
+    public static final RegistryObject<ExampleItemCapBlock> EXAMPLE_ITEM_CAP_BLOCK = BLOCKS.register("example_item_cap_block",
+            () -> new ExampleItemCapBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
+                    .mapColor(MapColor.QUARTZ)
+                    .strength(4f)
             ));
 }
