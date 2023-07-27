@@ -3,6 +3,7 @@ package dev.turtywurty.tutorialmod.init;
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.block.ExampleAdvancedBlock;
 import dev.turtywurty.tutorialmod.block.ExampleItemCapBlock;
+import dev.turtywurty.tutorialmod.block.ExampleSyncedBlock;
 import dev.turtywurty.tutorialmod.block.ExampleTickingBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
@@ -72,5 +73,11 @@ public class BlockInit {
             () -> new ExampleItemCapBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
                     .mapColor(MapColor.QUARTZ)
                     .strength(4f)
+            ));
+
+    public static final RegistryObject<ExampleSyncedBlock> EXAMPLE_SYNCED_BLOCK = BLOCKS.register("example_synced_block",
+            () -> new ExampleSyncedBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
+                    .mapColor(MapColor.CLAY)
+                    .strength(7f)
             ));
 }

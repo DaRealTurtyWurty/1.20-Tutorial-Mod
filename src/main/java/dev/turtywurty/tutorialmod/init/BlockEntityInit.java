@@ -3,6 +3,7 @@ package dev.turtywurty.tutorialmod.init;
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.blockentity.ExampleAdvancedBlockEntity;
 import dev.turtywurty.tutorialmod.blockentity.ExampleItemCapBlockEntity;
+import dev.turtywurty.tutorialmod.blockentity.ExampleSyncedBlockEntity;
 import dev.turtywurty.tutorialmod.blockentity.ExampleTickingBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,5 +27,9 @@ public class BlockEntityInit {
     public static final RegistryObject<BlockEntityType<ExampleItemCapBlockEntity>> EXAMPLE_ITEM_CAP_BLOCK_ENTITY = BLOCK_ENTITIES
             .register("example_item_cap_block",
                     () -> BlockEntityType.Builder.of(ExampleItemCapBlockEntity::new, BlockInit.EXAMPLE_ITEM_CAP_BLOCK.get())
+                            .build(null));
+    public static final RegistryObject<BlockEntityType<ExampleSyncedBlockEntity>> EXAMPLE_SYNCED_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_synced_block",
+                    () -> BlockEntityType.Builder.of(ExampleSyncedBlockEntity::new, BlockInit.EXAMPLE_SYNCED_BLOCK.get())
                             .build(null));
 }
