@@ -2,6 +2,7 @@ package dev.turtywurty.tutorialmod.block;
 
 import dev.turtywurty.tutorialmod.blockentity.ExampleScreenBlockEntity;
 import dev.turtywurty.tutorialmod.blockentity.util.TickableBlockEntity;
+import dev.turtywurty.tutorialmod.client.ClientHooks;
 import dev.turtywurty.tutorialmod.client.screen.ExampleBlockScreen;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
 import net.minecraft.client.Minecraft;
@@ -46,7 +47,7 @@ public class ExampleScreenBlock extends Block implements EntityBlock {
 
         BlockEntity be = level.getBlockEntity(pos);
         if(be instanceof ExampleScreenBlockEntity) {
-            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> Minecraft.getInstance().setScreen(new ExampleBlockScreen(pos)));
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> ClientHooks.openExampleBlockScreen(pos));
             return InteractionResult.SUCCESS;
         }
 
