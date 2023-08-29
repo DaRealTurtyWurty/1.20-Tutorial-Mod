@@ -80,4 +80,7 @@ public class BlockInit {
 
     public static final RegistryObject<ExampleScreenBlock> EXAMPLE_SCREEN_BLOCK = BLOCKS.register("example_screen_block",
             () -> new ExampleScreenBlock(BlockBehaviour.Properties.copy(Blocks.CACTUS)));
+
+    public static final RegistryObject<ExampleMenuBlock> EXAMPLE_MENU_BLOCK = BLOCKS.register("example_menu_block",
+            () -> new ExampleMenuBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
 }

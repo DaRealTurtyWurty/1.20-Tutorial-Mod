@@ -35,4 +35,9 @@ public class BlockEntityInit {
             .register("example_screen_block",
                     () -> BlockEntityType.Builder.of(ExampleScreenBlockEntity::new, BlockInit.EXAMPLE_SCREEN_BLOCK.get())
                             .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleMenuBlockEntity>> EXAMPLE_MENU_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_menu_block",
+                    () -> BlockEntityType.Builder.of(ExampleMenuBlockEntity::new, BlockInit.EXAMPLE_MENU_BLOCK.get())
+                            .build(null));
 }

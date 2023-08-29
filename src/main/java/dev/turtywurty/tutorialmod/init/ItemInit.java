@@ -132,4 +132,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> EXAMPLE_SCREEN_BLOCK_ITEM = addToTab(ITEMS.register("example_screen_block",
             () -> new BlockItem(BlockInit.EXAMPLE_SCREEN_BLOCK.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_MENU_BLOCK_ITEM = addToTab(ITEMS.register("example_menu_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_MENU_BLOCK.get(), new Item.Properties())));
 }

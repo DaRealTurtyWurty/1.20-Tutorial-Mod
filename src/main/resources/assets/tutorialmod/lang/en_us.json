@@ -25,5 +25,7 @@
   "block.tutorialmod.example_synced_block": "Example Synced Block",
   "block.tutorialmod.example_screen_block": "Example Screen Block",
   "gui.tutorialmod.example_block_screen": "Example Block Screen",
-  "gui.tutorialmod.example_block_screen.button.example_button": "Example Button"
+  "gui.tutorialmod.example_block_screen.button.example_button": "Example Button",
+  "block.tutorialmod.example_menu_block": "Example Menu Block",
+  "container.tutorialmod.example_menu_block": "Example Menu Block"
 }
