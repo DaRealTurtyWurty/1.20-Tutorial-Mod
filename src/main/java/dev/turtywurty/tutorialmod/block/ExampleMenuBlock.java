@@ -43,7 +43,6 @@ public class ExampleMenuBlock extends Block implements EntityBlock {
             return InteractionResult.SUCCESS;
 
         // open screen
-        NetworkHooks.openScreen((ServerPlayer) player, blockEntity, pos);
         return InteractionResult.CONSUME;
     }
 
