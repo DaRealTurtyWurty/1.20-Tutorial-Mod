@@ -1,13 +1,10 @@
 package dev.turtywurty.tutorialmod.block;
 
-import dev.turtywurty.tutorialmod.blockentity.ExampleItemCapBlockEntity;
 import dev.turtywurty.tutorialmod.blockentity.ExampleMenuBlockEntity;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -18,7 +15,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
