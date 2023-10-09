@@ -17,5 +17,6 @@ public class TutorialMod {
         CreativeTabInit.TABS.register(bus);
         EntityInit.ENTITIES.register(bus);
         BlockEntityInit.BLOCK_ENTITIES.register(bus);
+        MenuInit.MENU_TYPES.register(bus);
     }
 }

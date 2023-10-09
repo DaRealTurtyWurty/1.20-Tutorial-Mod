@@ -2,8 +2,14 @@ package dev.turtywurty.tutorialmod.blockentity;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
+import dev.turtywurty.tutorialmod.menu.ExampleMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -11,8 +17,12 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public class ExampleMenuBlockEntity extends BlockEntity {
+public class ExampleMenuBlockEntity extends BlockEntity implements MenuProvider {
+    private static final Component TITLE =
+            Component.translatable("container." + TutorialMod.MODID + ".example_menu_block");
+
     private final ItemStackHandler inventory = new ItemStackHandler(27) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -59,5 +69,16 @@ public class ExampleMenuBlockEntity extends BlockEntity {
 
     public ItemStackHandler getInventory() {
         return this.inventory;
+    }
+
+    @Override
+    public @NotNull Component getDisplayName() {
+        return TITLE;
+    }
+
+    @Nullable
+    @Override
+    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pPlayerInventory, Player pPlayer) {
+        return new ExampleMenu(pContainerId, pPlayerInventory, this);
     }
 }
