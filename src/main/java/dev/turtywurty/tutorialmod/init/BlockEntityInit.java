@@ -1,5 +1,6 @@
 package dev.turtywurty.tutorialmod.init;
 
+import com.google.common.base.Equivalence;
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.blockentity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -39,5 +40,10 @@ public class BlockEntityInit {
     public static final RegistryObject<BlockEntityType<ExampleMenuBlockEntity>> EXAMPLE_MENU_BLOCK_ENTITY = BLOCK_ENTITIES
             .register("example_menu_block",
                     () -> BlockEntityType.Builder.of(ExampleMenuBlockEntity::new, BlockInit.EXAMPLE_MENU_BLOCK.get())
+                            .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleEnergyGeneratorBlockEntity>> EXAMPLE_ENERGY_GENERATOR_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_energy_generator_block",
+                    () -> BlockEntityType.Builder.of(ExampleEnergyGeneratorBlockEntity::new, BlockInit.EXAMPLE_ENERGY_GENERATOR_BLOCK.get())
                             .build(null));
 }

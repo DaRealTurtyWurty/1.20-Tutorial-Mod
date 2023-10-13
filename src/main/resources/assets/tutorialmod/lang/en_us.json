@@ -27,5 +27,7 @@
   "gui.tutorialmod.example_block_screen": "Example Block Screen",
   "gui.tutorialmod.example_block_screen.button.example_button": "Example Button",
   "block.tutorialmod.example_menu_block": "Example Menu Block",
-  "container.tutorialmod.example_menu_block": "Example Menu Block"
+  "container.tutorialmod.example_menu_block": "Example Menu Block",
+  "block.tutorialmod.example_energy_generator_block": "Example Energy Generator Block",
+  "container.tutorialmod.example_energy_generator": "Example Energy Generator"
 }

@@ -40,7 +40,7 @@ public class ExampleMenuBlock extends Block implements EntityBlock {
             return InteractionResult.SUCCESS;
 
         // open screen
-        if(player instanceof ServerPlayer sPlayer) {
+        if (player instanceof ServerPlayer sPlayer) {
             sPlayer.openMenu(blockEntity, pos);
         }
 
@@ -49,9 +49,9 @@ public class ExampleMenuBlock extends Block implements EntityBlock {
 
     @Override
     public void onRemove(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState newState, boolean isMoving) {
-        if(!level.isClientSide()) {
+        if (!level.isClientSide()) {
             BlockEntity be = level.getBlockEntity(pos);
-            if(be instanceof ExampleMenuBlockEntity blockEntity) {
+            if (be instanceof ExampleMenuBlockEntity blockEntity) {
                 ItemStackHandler inventory = blockEntity.getInventory();
                 for (int index = 0; index < inventory.getSlots(); index++) {
                     ItemStack stack = inventory.getStackInSlot(index);

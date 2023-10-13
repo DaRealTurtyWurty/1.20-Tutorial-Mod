@@ -83,4 +83,7 @@ public class BlockInit {
 
     public static final RegistryObject<ExampleMenuBlock> EXAMPLE_MENU_BLOCK = BLOCKS.register("example_menu_block",
             () -> new ExampleMenuBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+
+    public static final RegistryObject<ExampleEnergyGeneratorBlock> EXAMPLE_ENERGY_GENERATOR_BLOCK = BLOCKS.register("example_energy_generator_block",
+            () -> new ExampleEnergyGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
 }
