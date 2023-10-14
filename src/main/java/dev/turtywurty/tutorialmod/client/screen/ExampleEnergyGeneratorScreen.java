@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ExampleEnergyGeneratorScreen extends AbstractContainerScreen<ExampleEnergyGeneratorMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_energy_generator_screen.png");
+            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_energy_generator.png");
 
     public ExampleEnergyGeneratorScreen(ExampleEnergyGeneratorMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

@@ -20,7 +20,7 @@ public class ExampleBlockScreen extends Screen {
             Component.translatable("gui." + TutorialMod.MODID + ".example_block_screen.button.example_button");
 
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_block_screen.png");
+            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_block.png");
 
     private final BlockPos position;
     private final int imageWidth, imageHeight;

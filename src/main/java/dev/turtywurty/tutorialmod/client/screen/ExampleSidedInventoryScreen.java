@@ -2,6 +2,7 @@ package dev.turtywurty.tutorialmod.client.screen;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.menu.ExampleMenu;
+import dev.turtywurty.tutorialmod.menu.ExampleSidedInventoryMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
@@ -9,11 +10,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import org.jetbrains.annotations.NotNull;
 
-public class ExampleMenuScreen extends AbstractContainerScreen<ExampleMenu> {
+public class ExampleSidedInventoryScreen extends AbstractContainerScreen<ExampleSidedInventoryMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_menu.png");
+            new ResourceLocation(TutorialMod.MODID, "textures/gui/example_sided_inventory.png");
 
-    public ExampleMenuScreen(ExampleMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
+    public ExampleSidedInventoryScreen(ExampleSidedInventoryMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
 
         this.imageWidth = 176;

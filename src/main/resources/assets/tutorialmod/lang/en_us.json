@@ -29,5 +29,7 @@
   "block.tutorialmod.example_menu_block": "Example Menu Block",
   "container.tutorialmod.example_menu_block": "Example Menu Block",
   "block.tutorialmod.example_energy_generator_block": "Example Energy Generator Block",
-  "container.tutorialmod.example_energy_generator": "Example Energy Generator"
+  "container.tutorialmod.example_energy_generator": "Example Energy Generator",
+  "block.tutorialmod.example_sided_inventory_block": "Example Sided Inventory Block",
+  "container.tutorialmod.example_sided_inventory_block": "Example Sided Inventory"
 }

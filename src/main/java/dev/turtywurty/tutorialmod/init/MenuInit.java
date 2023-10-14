@@ -3,6 +3,7 @@ package dev.turtywurty.tutorialmod.init;
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.menu.ExampleEnergyGeneratorMenu;
 import dev.turtywurty.tutorialmod.menu.ExampleMenu;
+import dev.turtywurty.tutorialmod.menu.ExampleSidedInventoryMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,4 +19,7 @@ public class MenuInit {
 
     public static final RegistryObject<MenuType<ExampleEnergyGeneratorMenu>> EXAMPLE_ENERGY_GENERATOR_MENU = MENU_TYPES.register("example_energy_generator_menu",
             () -> IForgeMenuType.create(ExampleEnergyGeneratorMenu::new));
+
+    public static final RegistryObject<MenuType<ExampleSidedInventoryMenu>> EXAMPLE_SIDED_INVENTORY_MENU = MENU_TYPES.register("example_sided_inventory_menu",
+            () -> IForgeMenuType.create(ExampleSidedInventoryMenu::new));
 }

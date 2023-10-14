@@ -46,4 +46,9 @@ public class BlockEntityInit {
             .register("example_energy_generator_block",
                     () -> BlockEntityType.Builder.of(ExampleEnergyGeneratorBlockEntity::new, BlockInit.EXAMPLE_ENERGY_GENERATOR_BLOCK.get())
                             .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleSidedInventoryBlockEntity>> EXAMPLE_SIDED_INVENTORY_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_sided_inventory_block",
+                    () -> BlockEntityType.Builder.of(ExampleSidedInventoryBlockEntity::new, BlockInit.EXAMPLE_SIDED_INVENTORY_BLOCK.get())
+                            .build(null));
 }

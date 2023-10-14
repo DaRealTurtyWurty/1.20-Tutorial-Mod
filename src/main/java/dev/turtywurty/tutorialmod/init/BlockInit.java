@@ -86,4 +86,7 @@ public class BlockInit {
 
     public static final RegistryObject<ExampleEnergyGeneratorBlock> EXAMPLE_ENERGY_GENERATOR_BLOCK = BLOCKS.register("example_energy_generator_block",
             () -> new ExampleEnergyGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+
+    public static final RegistryObject<ExampleSidedInventoryBlock> EXAMPLE_SIDED_INVENTORY_BLOCK = BLOCKS.register("example_sided_inventory_block",
+            () -> new ExampleSidedInventoryBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
 }
