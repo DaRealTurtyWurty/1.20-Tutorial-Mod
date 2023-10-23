@@ -155,6 +155,13 @@ public class ExampleEnergyGeneratorBlockEntity extends BlockEntity implements Ti
     }
 
     @Override
+    public void invalidateCaps() {
+        super.invalidateCaps();
+        this.inventoryOptional.invalidate();
+        this.energyOptional.invalidate();
+    }
+
+    @Override
     public @NotNull Component getDisplayName() {
         return TITLE;
     }
