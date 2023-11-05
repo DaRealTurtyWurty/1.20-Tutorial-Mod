@@ -4,12 +4,14 @@ import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.entity.ExampleAnimatedEntity;
 import dev.turtywurty.tutorialmod.entity.ExampleEntity;
 import dev.turtywurty.tutorialmod.init.EntityInit;
+import dev.turtywurty.tutorialmod.network.PacketHandler;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = TutorialMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CommonModEvents {
@@ -36,5 +38,12 @@ public class CommonModEvents {
                 ExampleAnimatedEntity::canSpawn,
                 SpawnPlacementRegisterEvent.Operation.OR
         );
+    }
+
+    @SubscribeEvent
+    public static void commonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            PacketHandler.register();
+        });
     }
 }

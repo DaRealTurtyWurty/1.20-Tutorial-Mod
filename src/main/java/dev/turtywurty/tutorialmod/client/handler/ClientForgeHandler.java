@@ -2,6 +2,8 @@ package dev.turtywurty.tutorialmod.client.handler;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.client.Keybindings;
+import dev.turtywurty.tutorialmod.network.PacketHandler;
+import dev.turtywurty.tutorialmod.network.SKeyPressSpawnEntityPacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,7 +25,7 @@ public class ClientForgeHandler {
 
         if(Keybindings.INSTANCE.examplePacketKey.consumeClick() && minecraft.player != null) {
             minecraft.player.displayClientMessage(EXAMPLE_KEY_PRESSED, true);
-            // TODO: Send a packet to the server to spawn an entity
+            PacketHandler.sendToServer(new SKeyPressSpawnEntityPacket());
         }
     }
 }
