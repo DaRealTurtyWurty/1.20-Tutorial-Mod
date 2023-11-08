@@ -3,6 +3,7 @@ package dev.turtywurty.tutorialmod.client.handler;
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.client.Keybindings;
 import dev.turtywurty.tutorialmod.client.screen.ExampleEnergyGeneratorScreen;
+import dev.turtywurty.tutorialmod.client.screen.ExampleFluidScreen;
 import dev.turtywurty.tutorialmod.client.screen.ExampleMenuScreen;
 import dev.turtywurty.tutorialmod.client.screen.ExampleSidedInventoryScreen;
 import dev.turtywurty.tutorialmod.init.MenuInit;
@@ -21,6 +22,7 @@ public class ClientModHandler {
             MenuScreens.register(MenuInit.EXAMPLE_MENU.get(), ExampleMenuScreen::new);
             MenuScreens.register(MenuInit.EXAMPLE_ENERGY_GENERATOR_MENU.get(), ExampleEnergyGeneratorScreen::new);
             MenuScreens.register(MenuInit.EXAMPLE_SIDED_INVENTORY_MENU.get(), ExampleSidedInventoryScreen::new);
+            MenuScreens.register(MenuInit.EXAMPLE_FLUID_MENU.get(), ExampleFluidScreen::new);
         });
     }
 

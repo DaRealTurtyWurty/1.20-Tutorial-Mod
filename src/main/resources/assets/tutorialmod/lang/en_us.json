@@ -35,5 +35,7 @@
   "key.tutorialmod.example_key": "Example Key",
   "key.tutorialmod.example_packet_key": "Example Packet Key",
   "key.categories.tutorialmod": "Tutorial Mod",
-  "message.tutorialmod.example_key_pressed": "Example Key was pressed!"
+  "message.tutorialmod.example_key_pressed": "Example Key was pressed!",
+  "block.tutorialmod.example_fluid_block": "Example Fluid Block",
+  "container.tutorialmod.example_fluid": "Example Fluid Tank"
 }
