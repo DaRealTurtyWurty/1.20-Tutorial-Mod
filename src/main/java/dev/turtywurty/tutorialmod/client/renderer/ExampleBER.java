@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -30,14 +31,20 @@ public class ExampleBER implements BlockEntityRenderer<ExampleBERBlockEntity> {
             return;
 
         Level level = pBlockEntity.getLevel();
-        if (level == null)
+        if(level == null)
             return;
 
         BlockPos pos = pBlockEntity.getBlockPos().above();
 
-        double offset = Math.sin((pBlockEntity.getLevel().getGameTime() + pPartialTick) / 10.0) / 6.0;
-        double rotation = Math.sin((pBlockEntity.getLevel().getGameTime() + pPartialTick) / 20.0) * 40.0;
-        double scale = 0.75 + Math.sin((pBlockEntity.getLevel().getGameTime() + pPartialTick) / 10.0) / 4.0;
+        int packedLight = LightTexture.pack(
+                level.getBrightness(LightLayer.BLOCK, pos),
+                level.getBrightness(LightLayer.SKY, pos)
+        );
+
+        double relativeGameTime = level.getGameTime() + pPartialTick;
+        double offset = Math.sin(relativeGameTime / 10.0) / 6.0;
+        double rotation = Math.sin(relativeGameTime / 20.0) * 40.0;
+        double scale = 0.75 + Math.sin(relativeGameTime / 10.0) / 4.0;
 
         pPoseStack.pushPose();
         pPoseStack.translate(0.5, 1.3 + offset, 0.5);
@@ -46,32 +53,28 @@ public class ExampleBER implements BlockEntityRenderer<ExampleBERBlockEntity> {
         this.context.getItemRenderer().renderStatic(
                 stack,
                 ItemDisplayContext.FIXED,
-                LightTexture.pack(
-                        level.getBrightness(LightLayer.BLOCK, pos),
-                        level.getBrightness(LightLayer.SKY, pos)),
-                pPackedOverlay,
+                packedLight,
+                OverlayTexture.NO_OVERLAY,
                 pPoseStack,
                 pBuffer,
                 level,
                 0
         );
 
-        Font font = context.getFont();
+        Font font = this.context.getFont();
         pPoseStack.scale(0.05f, -0.05f, 0.05f);
         pPoseStack.translate(-10f + font.width(stack.getCount() + "") / 2f, -15.0f, 0.0f);
         font.drawInBatch(
                 stack.getCount() + "",
-                0f,
-                0f,
+                0,
+                0,
                 0xECECEC,
                 false,
                 pPoseStack.last().pose(),
                 pBuffer,
                 Font.DisplayMode.NORMAL,
                 0,
-                LightTexture.pack(
-                        level.getBrightness(LightLayer.BLOCK, pos),
-                        level.getBrightness(LightLayer.SKY, pos))
+                packedLight
         );
 
         pPoseStack.popPose();
