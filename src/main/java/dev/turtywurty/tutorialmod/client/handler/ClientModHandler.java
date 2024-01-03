@@ -7,6 +7,7 @@ import dev.turtywurty.tutorialmod.client.model.ExampleEntityModel;
 import dev.turtywurty.tutorialmod.client.renderer.ExampleAnimatedEntityRenderer;
 import dev.turtywurty.tutorialmod.client.renderer.ExampleBER;
 import dev.turtywurty.tutorialmod.client.renderer.ExampleEntityRenderer;
+import dev.turtywurty.tutorialmod.client.renderer.ExampleFluidBER;
 import dev.turtywurty.tutorialmod.client.screen.*;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
 import dev.turtywurty.tutorialmod.init.EntityInit;
@@ -29,6 +30,7 @@ public class ClientModHandler {
             MenuScreens.register(MenuInit.EXAMPLE_SIDED_INVENTORY_MENU.get(), ExampleSidedInventoryScreen::new);
             MenuScreens.register(MenuInit.EXAMPLE_FLUID_MENU.get(), ExampleFluidScreen::new);
             MenuScreens.register(MenuInit.EXAMPLE_BER_MENU.get(), ExampleBERScreen::new);
+            MenuScreens.register(MenuInit.EXAMPLE_FLUID_BER_MENU.get(), ExampleFluidBERScreen::new);
         });
     }
 
@@ -46,6 +48,7 @@ public class ClientModHandler {
 
         // Block Entities
         event.registerBlockEntityRenderer(BlockEntityInit.EXAMPLE_BER_BLOCK_ENTITY.get(), ExampleBER::new);
+        event.registerBlockEntityRenderer(BlockEntityInit.EXAMPLE_FLUID_BER_BLOCK_ENTITY.get(), ExampleFluidBER::new);
     }
 
     @SubscribeEvent

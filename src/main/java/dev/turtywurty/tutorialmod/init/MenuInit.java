@@ -26,4 +26,7 @@ public class MenuInit {
 
     public static final RegistryObject<MenuType<ExampleBERMenu>> EXAMPLE_BER_MENU = MENU_TYPES.register("example_ber_menu",
             () -> IForgeMenuType.create(ExampleBERMenu::new));
+
+    public static final RegistryObject<MenuType<ExampleFluidBERMenu>> EXAMPLE_FLUID_BER_MENU = MENU_TYPES.register("example_fluid_ber_menu",
+            () -> IForgeMenuType.create(ExampleFluidBERMenu::new));
 }

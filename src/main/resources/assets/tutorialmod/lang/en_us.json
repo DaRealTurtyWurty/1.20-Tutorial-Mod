@@ -39,5 +39,7 @@
   "block.tutorialmod.example_fluid_block": "Example Fluid Block",
   "container.tutorialmod.example_fluid": "Example Fluid Tank",
   "block.tutorialmod.example_ber_block": "Example BER Block",
-  "container.tutorialmod.example_ber_block": "Example BER"
+  "container.tutorialmod.example_ber_block": "Example BER",
+  "block.tutorialmod.example_fluid_ber_block": "Example Fluid BER Block",
+  "container.tutorialmod.example_fluid_ber_block": "Example Fluid BER"
 }

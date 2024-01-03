@@ -147,4 +147,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> EXAMPLE_BER_BLOCK_ITEM = addToTab(ITEMS.register("example_ber_block",
             () -> new BlockItem(BlockInit.EXAMPLE_BER_BLOCK.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_FLUID_BER_BLOCK_ITEM = addToTab(ITEMS.register("example_fluid_ber_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_FLUID_BER_BLOCK.get(), new Item.Properties())));
 }

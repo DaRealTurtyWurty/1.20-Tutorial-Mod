@@ -1,7 +1,7 @@
 package dev.turtywurty.tutorialmod.init;
 
-import com.google.common.base.Equivalence;
 import dev.turtywurty.tutorialmod.TutorialMod;
+import dev.turtywurty.tutorialmod.blockentity.ExampleFluidBERBlockEntity;
 import dev.turtywurty.tutorialmod.blockentity.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -60,5 +60,10 @@ public class BlockEntityInit {
     public static final RegistryObject<BlockEntityType<ExampleBERBlockEntity>> EXAMPLE_BER_BLOCK_ENTITY = BLOCK_ENTITIES
             .register("example_ber_block",
                     () -> BlockEntityType.Builder.of(ExampleBERBlockEntity::new, BlockInit.EXAMPLE_BER_BLOCK.get())
+                            .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleFluidBERBlockEntity>> EXAMPLE_FLUID_BER_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_fluid_ber_block",
+                    () -> BlockEntityType.Builder.of(ExampleFluidBERBlockEntity::new, BlockInit.EXAMPLE_FLUID_BER_BLOCK.get())
                             .build(null));
 }
