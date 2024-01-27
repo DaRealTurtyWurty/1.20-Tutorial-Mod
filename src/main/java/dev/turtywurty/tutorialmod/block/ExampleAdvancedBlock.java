@@ -1,5 +1,6 @@
 package dev.turtywurty.tutorialmod.block;
 
+import com.mojang.serialization.MapCodec;
 import dev.turtywurty.tutorialmod.blockentity.ExampleAdvancedBlockEntity;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
 import net.minecraft.core.BlockPos;
@@ -21,9 +22,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ExampleAdvancedBlock extends HorizontalDirectionalBlock implements EntityBlock {
+    private static final MapCodec<ExampleAdvancedBlock> CODEC = simpleCodec(ExampleAdvancedBlock::new);
+
     public ExampleAdvancedBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return CODEC;
     }
 
     @Nullable

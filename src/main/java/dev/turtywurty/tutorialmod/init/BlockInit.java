@@ -18,7 +18,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MODID);
 
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANVIL)
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)
                     .mapColor(MapColor.COLOR_GREEN)
                     .strength(5.0f, 17f)
                     .instrument(NoteBlockInstrument.BANJO)
@@ -29,73 +29,73 @@ public class BlockInit {
 
     public static final RegistryObject<DropExperienceBlock> EXAMPLE_ORE = BLOCKS.register("example_ore",
             () -> new DropExperienceBlock(
-                    BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE),
-                    UniformInt.of(4, 7)
+                    UniformInt.of(4, 7),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_ORE)
             ));
 
     public static final RegistryObject<DropExperienceBlock> DEEPSLATE_EXAMPLE_ORE = BLOCKS.register("deepslate_example_ore",
             () -> new DropExperienceBlock(
-                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE),
-                    UniformInt.of(4, 9)
+                    UniformInt.of(4, 9),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_DIAMOND_ORE)
             )
     );
 
     public static final RegistryObject<DropExperienceBlock> NETHER_EXAMPLE_ORE = BLOCKS.register("nether_example_ore",
             () -> new DropExperienceBlock(
-                    BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE),
-                    UniformInt.of(10, 15)
+                    UniformInt.of(10, 15),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_QUARTZ_ORE)
             )
     );
 
     public static final RegistryObject<DropExperienceBlock> END_EXAMPLE_ORE = BLOCKS.register("end_example_ore",
             () -> new DropExperienceBlock(
-                    BlockBehaviour.Properties.copy(Blocks.END_STONE),
-                    UniformInt.of(10, 15)
+                    UniformInt.of(10, 15),
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)
             )
     );
 
     public static final RegistryObject<ExampleAdvancedBlock> EXAMPLE_ADVANCED_BLOCK = BLOCKS.register("example_advanced_block",
-            () -> new ExampleAdvancedBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)
+            () -> new ExampleAdvancedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)
                     .mapColor(MapColor.TERRACOTTA_YELLOW)
                     .strength(5.0f, 15f)
             ));
 
     public static final RegistryObject<ExampleTickingBlock> EXAMPLE_TICKING_BLOCK = BLOCKS.register("example_ticking_block",
-            () -> new ExampleTickingBlock(BlockBehaviour.Properties.copy(Blocks.BEEHIVE)
+            () -> new ExampleTickingBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BEEHIVE)
                     .mapColor(MapColor.WARPED_STEM)
                     .strength(2.0f, 8f)
             ));
 
     public static final RegistryObject<ExampleItemCapBlock> EXAMPLE_ITEM_CAP_BLOCK = BLOCKS.register("example_item_cap_block",
-            () -> new ExampleItemCapBlock(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)
+            () -> new ExampleItemCapBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK)
                     .mapColor(MapColor.QUARTZ)
                     .strength(4f)
             ));
 
     public static final RegistryObject<ExampleSyncedBlock> EXAMPLE_SYNCED_BLOCK = BLOCKS.register("example_synced_block",
-            () -> new ExampleSyncedBlock(BlockBehaviour.Properties.copy(Blocks.BELL)
+            () -> new ExampleSyncedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BELL)
                     .mapColor(MapColor.CLAY)
                     .strength(7f)
             ));
 
     public static final RegistryObject<ExampleScreenBlock> EXAMPLE_SCREEN_BLOCK = BLOCKS.register("example_screen_block",
-            () -> new ExampleScreenBlock(BlockBehaviour.Properties.copy(Blocks.CACTUS)));
+            () -> new ExampleScreenBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS)));
 
     public static final RegistryObject<ExampleMenuBlock> EXAMPLE_MENU_BLOCK = BLOCKS.register("example_menu_block",
-            () -> new ExampleMenuBlock(BlockBehaviour.Properties.copy(Blocks.CAKE)));
+            () -> new ExampleMenuBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CAKE)));
 
     public static final RegistryObject<ExampleEnergyGeneratorBlock> EXAMPLE_ENERGY_GENERATOR_BLOCK = BLOCKS.register("example_energy_generator_block",
-            () -> new ExampleEnergyGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+            () -> new ExampleEnergyGeneratorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)));
 
     public static final RegistryObject<ExampleSidedInventoryBlock> EXAMPLE_SIDED_INVENTORY_BLOCK = BLOCKS.register("example_sided_inventory_block",
-            () -> new ExampleSidedInventoryBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+            () -> new ExampleSidedInventoryBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)));
 
     public static final RegistryObject<ExampleFluidBlock> EXAMPLE_FLUID_BLOCK = BLOCKS.register("example_fluid_block",
-            () -> new ExampleFluidBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+            () -> new ExampleFluidBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)));
 
     public static final RegistryObject<ExampleBERBlock> EXAMPLE_BER_BLOCK = BLOCKS.register("example_ber_block",
-            () -> new ExampleBERBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+            () -> new ExampleBERBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL)));
 
     public static final RegistryObject<ExampleFluidBERBlock> EXAMPLE_FLUID_BER_BLOCK = BLOCKS.register("example_fluid_ber_block",
-            () -> new ExampleFluidBERBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL).noOcclusion()));
+            () -> new ExampleFluidBERBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL).noOcclusion()));
 }
