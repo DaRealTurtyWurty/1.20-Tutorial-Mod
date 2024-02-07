@@ -66,4 +66,9 @@ public class BlockEntityInit {
             .register("example_fluid_ber_block",
                     () -> BlockEntityType.Builder.of(ExampleFluidBERBlockEntity::new, BlockInit.EXAMPLE_FLUID_BER_BLOCK.get())
                             .build(null));
+
+    public static final RegistryObject<BlockEntityType<ExampleAnimatedBlockEntity>> EXAMPLE_ANIMATED_BLOCK_ENTITY = BLOCK_ENTITIES
+            .register("example_animated_block",
+                    () -> BlockEntityType.Builder.of(ExampleAnimatedBlockEntity::new, BlockInit.EXAMPLE_ANIMATED_BLOCK.get())
+                            .build(null));
 }

@@ -8,6 +8,10 @@ public interface TickableBlockEntity {
     void tick();
 
     static <T extends BlockEntity> BlockEntityTicker<T> getTickerHelper(Level level) {
-        return level.isClientSide() ? null : (level0, pos0, state0, blockEntity) -> ((TickableBlockEntity)blockEntity).tick();
+        return getTickerHelper(level, false);
+    }
+
+    static <T extends BlockEntity> BlockEntityTicker<T> getTickerHelper(Level level, boolean allowClient) {
+        return level.isClientSide() && !allowClient ? null : (level0, pos0, state0, blockEntity) -> ((TickableBlockEntity)blockEntity).tick();
     }
 }

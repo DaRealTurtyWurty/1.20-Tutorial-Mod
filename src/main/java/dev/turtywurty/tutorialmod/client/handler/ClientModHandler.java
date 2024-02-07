@@ -2,12 +2,10 @@ package dev.turtywurty.tutorialmod.client.handler;
 
 import dev.turtywurty.tutorialmod.TutorialMod;
 import dev.turtywurty.tutorialmod.client.Keybindings;
+import dev.turtywurty.tutorialmod.client.model.ExampleAnimatedBlockModel;
 import dev.turtywurty.tutorialmod.client.model.ExampleAnimatedEntityModel;
 import dev.turtywurty.tutorialmod.client.model.ExampleEntityModel;
-import dev.turtywurty.tutorialmod.client.renderer.ExampleAnimatedEntityRenderer;
-import dev.turtywurty.tutorialmod.client.renderer.ExampleBER;
-import dev.turtywurty.tutorialmod.client.renderer.ExampleEntityRenderer;
-import dev.turtywurty.tutorialmod.client.renderer.ExampleFluidBER;
+import dev.turtywurty.tutorialmod.client.renderer.*;
 import dev.turtywurty.tutorialmod.client.screen.*;
 import dev.turtywurty.tutorialmod.init.BlockEntityInit;
 import dev.turtywurty.tutorialmod.init.EntityInit;
@@ -49,11 +47,13 @@ public class ClientModHandler {
         // Block Entities
         event.registerBlockEntityRenderer(BlockEntityInit.EXAMPLE_BER_BLOCK_ENTITY.get(), ExampleBER::new);
         event.registerBlockEntityRenderer(BlockEntityInit.EXAMPLE_FLUID_BER_BLOCK_ENTITY.get(), ExampleFluidBER::new);
+        event.registerBlockEntityRenderer(BlockEntityInit.EXAMPLE_ANIMATED_BLOCK_ENTITY.get(), ExampleAnimatedBER::new);
     }
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ExampleEntityModel.LAYER_LOCATION, ExampleEntityModel::createBodyLayer);
         event.registerLayerDefinition(ExampleAnimatedEntityModel.LAYER_LOCATION, ExampleAnimatedEntityModel::createBodyLayer);
+        event.registerLayerDefinition(ExampleAnimatedBlockModel.LAYER_LOCATION, ExampleAnimatedBlockModel::createMainLayer);
     }
 }

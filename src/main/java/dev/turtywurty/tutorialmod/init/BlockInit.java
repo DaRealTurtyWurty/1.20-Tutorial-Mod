@@ -98,4 +98,7 @@ public class BlockInit {
 
     public static final RegistryObject<ExampleFluidBERBlock> EXAMPLE_FLUID_BER_BLOCK = BLOCKS.register("example_fluid_ber_block",
             () -> new ExampleFluidBERBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL).noOcclusion()));
+
+    public static final RegistryObject<ExampleAnimatedBlock> EXAMPLE_ANIMATED_BLOCK = BLOCKS.register("example_animated_block",
+            () -> new ExampleAnimatedBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ANVIL).noOcclusion()));
 }

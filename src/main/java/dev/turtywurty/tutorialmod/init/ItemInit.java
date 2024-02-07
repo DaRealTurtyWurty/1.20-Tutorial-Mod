@@ -150,4 +150,7 @@ public class ItemInit {
 
     public static final RegistryObject<BlockItem> EXAMPLE_FLUID_BER_BLOCK_ITEM = addToTab(ITEMS.register("example_fluid_ber_block",
             () -> new BlockItem(BlockInit.EXAMPLE_FLUID_BER_BLOCK.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> EXAMPLE_ANIMATED_BLOCK_ITEM = addToTab(ITEMS.register("example_animated_block",
+            () -> new BlockItem(BlockInit.EXAMPLE_ANIMATED_BLOCK.get(), new Item.Properties())));
 }
